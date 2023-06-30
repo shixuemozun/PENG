@@ -1,0 +1,9 @@
+# family_boco file written by ICEM CFD by DELL on Fri Jun 30 10:12:36 中国标准时间 2023
+## solver ANSYS Fluent
+"GEOM"
+"GEOM" "color" 16663900
+"FLOW"
+"FLOW" "color" 16663900
+"WALL"
+"WALL" "color" 16663900
+

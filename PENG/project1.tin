@@ -1,0 +1,97 @@
+// tetin file version 1.1
+// written by ICEM CFD - version 19.2 on Fri Jun 30 08:10:42 2023
+// written by ICEM CFD - version 19.2 on Fri Jun 30 08:11:27 2023
+// written by ICEM CFD - version 19.2 on Fri Jun 30 10:12:36 2023
+
+set_triangulation_tolerance 0.001
+define_family GEOM color 16663866
+define_family FLOW color 14693271
+define_family WALL color 3604041
+
+prescribed_point 0 0 0 family GEOM name pnt.00
+prescribed_point 0 -0.5 0 family GEOM name pnt.01
+prescribed_point 1.2 0 0 family GEOM name pnt.03
+prescribed_point 1.2 -0.5 0 family GEOM name pnt.04
+prescribed_point 1.2 0.5 0 family GEOM name pnt.05
+prescribed_point 1.2 -1 0 family GEOM name pnt.06
+prescribed_point 6.2 0.5 0 family GEOM name pnt.07
+prescribed_point 6.2 -1 0 family GEOM name pnt.08
+define_curve family FLOW tetra_size 1e+10 name crv.00 vertex1 pnt.00 vertex2 pnt.01
+bspline
+2,2,0
+0,0,1,1
+0,0,0
+0,-0.5,0
+define_curve family WALL tetra_size 1e+10 name crv.01 vertex1 pnt.01 vertex2 pnt.04
+bspline
+2,2,0
+0,0,1,1
+0,-0.5,0
+1.2,-0.5,0
+define_curve family WALL tetra_size 1e+10 name crv.02 vertex1 pnt.04 vertex2 pnt.06
+bspline
+2,2,0
+0,0,1,1
+1.2,-0.5,0
+1.2,-1,0
+define_curve family WALL tetra_size 1e+10 name crv.03 vertex1 pnt.06 vertex2 pnt.08
+bspline
+2,2,0
+0,0,1,1
+1.2,-1,0
+6.2,-1,0
+define_curve family WALL tetra_size 1e+10 name crv.04 vertex1 pnt.08 vertex2 pnt.07
+bspline
+2,2,0
+0,0,1,1
+6.2,-1,0
+6.2,0.5,0
+define_curve family WALL tetra_size 1e+10 name crv.05 vertex1 pnt.07 vertex2 pnt.05
+bspline
+2,2,0
+0,0,1,1
+6.2,0.5,0
+1.2,0.5,0
+define_curve family WALL tetra_size 1e+10 name crv.06 vertex1 pnt.05 vertex2 pnt.03
+bspline
+2,2,0
+0,0,1,1
+1.2,0.5,0
+1.2,0,0
+define_curve family WALL tetra_size 1e+10 name crv.07 vertex1 pnt.03 vertex2 pnt.00
+bspline
+2,2,0
+0,0,1,1
+1.2,0,0
+0,0,0
+affix 0
+define_model 0.050000001 reference_size 1
+global_meshing_parameter quadratic "0"
+global_meshing_parameter snorm "1"
+global_meshing_parameter shrinkwrap_projfactor "0.1"
+global_meshing_parameter shrinkwrap_nsmooth "5"
+global_meshing_parameter free_bunch "0"
+global_meshing_parameter mapped_method "1"
+global_meshing_parameter merge_surfs "1"
+global_meshing_parameter max_elements "0"
+global_meshing_parameter max_nodes "0"
+global_meshing_parameter min_angle "0.0"
+global_meshing_parameter max_length "0.0"
+global_meshing_parameter max_area "0.0"
+global_meshing_parameter smooth_dormant "0"
+global_meshing_parameter mesh_dormant "0"
+global_meshing_parameter impr_level "1"
+global_meshing_parameter try_harder "1"
+global_meshing_parameter ign_size "0.003"
+global_meshing_parameter surf_sizes "0"
+global_meshing_parameter proj_surf "1"
+global_meshing_parameter adjust_nodes_max "0.0"
+global_meshing_parameter block_mapping "0.2"
+global_meshing_parameter bound_smooth "0"
+global_meshing_parameter protect_line "0"
+global_meshing_parameter bunch_respect "0"
+global_meshing_parameter simple_offset "0"
+global_meshing_parameter mesh_method "1"
+global_meshing_parameter mesh_type "0"
+define_prism_meshing_parameters law 0 nlay 3 hratio 1.2 min_quality 0.01 fillet 0.1 tetra_smooth_limit 0.3
+return
